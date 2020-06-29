@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import Vant from 'vant';
 import 'vant/lib/index.css';
+import axios from 'axios';
+import './assets/rem.js';
+
+Vue.prototype.http = axios
 
 Vue.config.productionTip = false
 
