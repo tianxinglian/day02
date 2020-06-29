@@ -1,17 +1,19 @@
 <template>
   <div>
-      <Banner></Banner>
+    <Banner></Banner>
+    <Barpeo></Barpeo>
   </div>
 </template>
 <script>
-import Banner from '@/components/Banner.vue';
+import Banner from "@/components/Banner.vue";
+import Barpeo from "@/components/barpeo.vue";
 export default {
-    components:{
-        Banner
-    }
-}
+  components: {
+    Banner,
+    Barpeo
+  }
+};
 </script>
 
 <style scoped>
-
 </style>

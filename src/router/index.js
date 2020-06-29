@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/pages/Home.vue';
+import BarList from '@/pages/BarList.vue' 
+import Barpeo from '@/components/Barpeo.vue';
 
 Vue.use(Router)
 
@@ -16,6 +18,16 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/barlist',
+      name: 'barlist',
+      component: BarList
+    },
+    {
+      path: '/barpeo',
+      name: 'barpeo',
+      component: Barpeo
     }
   ]
 })
