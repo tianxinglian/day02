@@ -44,28 +44,37 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style scoped>
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 0.16rem;
 }
 .banner {
-  width: 100%;
+  width: 5.2rem;
   position: relative;
 }
+.my-swipe {
+  width: 5.2rem;
+  height: 5.2rem;
+}
 .my-swipe .van-swipe-item {
+  width: 5.2rem;
   height: 5.2rem;
   color: #fff;
   font-size: 1rem;
-  line-height: 150px;
+  line-height: 1.5rem;
   text-align: center;
   background-color: #ffffff;
-  img {
-    width: 100%;
-    height: 100%;
-  }
+}
+.my-swipe .van-swipe-item img {
+  width: 5.2rem;
+  height: 5.2rem;
 }
 .nav {
-  width: 100%;
+  width: 5.2rem;
   height: 1.3rem;
   font-size: 0.22rem;
   background: white;
@@ -78,9 +87,9 @@ body {
   text-align: center;
   border-radius: 20% 20% 0 0;
   border-bottom: 0.2rem solid #f5f5f5;
-  img {
-    width: 0.58rem;
-    height: 0.58rem;
-  }
+}
+.nav img {
+  width: 0.58rem;
+  height: 0.58rem;
 }
 </style>

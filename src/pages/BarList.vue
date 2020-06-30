@@ -14,9 +14,9 @@
             <h4>{{ item.name }}</h4>
             <p class="details">{{ item.characteristic }}</p>
             <p class="price">
-              <span class="old">￥169</span>
-              <span>￥169</span>
-              <span>234件</span>
+              <span class="old">￥{{ item.kanjiaPrice }}</span>
+              <span>￥{{ item.originalPrice }}</span>
+              <span>{{ item.stores }}件</span>
             </p>
             <p class="prname">
               <span class="oldn">低价</span>
@@ -63,11 +63,11 @@ body {
 }
 .title {
   width: 5.2rem;
-  height: 0.5rem;
+  height: 0.6rem;
   font-size: 0.18rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 .back {
   float: left;
@@ -111,10 +111,14 @@ ul {
 .price {
   font-size: 0.16rem;
   color: slategrey;
+  display: flex;
+  justify-content: space-around;
 }
 .prname {
   font-size: 0.16rem;
   color: slategrey;
+  display: flex;
+  justify-content: space-around;
 }
 .old {
   font-weight: bold;
