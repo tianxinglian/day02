@@ -5,6 +5,7 @@ import Home from '@/pages/Home.vue';
 import BarList from '@/pages/BarList.vue' 
 import Barpeo from '@/components/barpeo.vue';
 import Topic from '@/components/Topic.vue';
+import Hot from '@/components/Hot.vue';
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/topic',
       name: 'topic',
       component: Topic
+    },
+    {
+      path: '/hot',
+      name: 'hot',
+      component: Hot
     }
     
   ]
