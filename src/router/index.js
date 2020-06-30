@@ -7,6 +7,11 @@ import Barpeo from '@/components/barpeo.vue';
 import Topic from '@/components/Topic.vue';
 import Hot from '@/components/Hot.vue';
 
+import Index from '@/pages/Index.vue';
+import Class from '@/pages/class.vue';
+import Cart from '@/pages/Cart.vue';
+import My from '@/pages/My.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -14,12 +19,31 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      redirect:"/home"
     },
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: Home,
+      children:[
+        {
+          path:"index",
+          component:Index
+        },
+        {
+          path:"class",
+          component:Class
+        },
+        {
+          path:"cart",
+          component:Cart
+        },
+        {
+          path:"my",
+          component:My
+        },
+      ]
     },
     {
       path: '/barlist',
