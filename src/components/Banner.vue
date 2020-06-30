@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="banner">
+    <van-loading v-if="loading">加载中。。。</van-loading>
+    <div class="banner" v-else>
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item v-for="item of banners" :key="item.id">
           <img :src="item.picUrl" alt />
@@ -32,20 +33,22 @@ import axios from "axios";
 export default {
   data() {
     return {
-      banners: []
+      banners: [],
+      loading: true
     };
   },
   created() {
     this.http.get("https://api.it120.cc/small4/banner/list").then(msg => {
       console.log(msg);
       this.banners = msg.data.data;
+      this.loading = false;
     });
   }
 };
 </script>
 
 <style scoped>
-*{
+* {
   margin: 0;
   padding: 0;
 }

@@ -5,7 +5,8 @@
       <span class="jump">></span>
     </div>
     <div class="tlist">
-      <ul>
+      <van-loading v-if="loading">加载中。。。</van-loading>
+      <ul v-else>
         <Stopic class="stopic" v-for="item in topic" :key="item.id" :stopic="item" />
       </ul>
     </div>
@@ -18,13 +19,15 @@ import Stopic from "@/components/Stopic.vue";
 export default {
   data() {
     return {
-      topic: []
+      topic: [],
+      loading: true
     };
   },
   created() {
     this.http.get("https://api.it120.cc/small4/cms/news/list").then(msg => {
       console.log(msg);
       this.topic = msg.data.data;
+      this.loading = false;
     });
   },
   components: {

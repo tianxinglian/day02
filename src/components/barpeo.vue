@@ -4,7 +4,8 @@
       <span class="ti">全民砍价</span>
       <span class="jump" @click="jump">></span>
     </div>
-    <ul>
+    <van-loading v-if="loading">加载中。。。</van-loading>
+    <ul v-else>
       <li v-for="item of barlist" :key="item.id">
         <div class="list">
           <div class="left">
@@ -34,7 +35,8 @@
 export default {
   data() {
     return {
-      barlist: []
+      barlist: [],
+      loading: true
     };
   },
   created() {
@@ -43,6 +45,7 @@ export default {
       .then(msg => {
         console.log(msg.data.data.goodsMap);
         this.barlist = msg.data.data.goodsMap;
+        this.loading = false;
       });
   },
   methods: {
